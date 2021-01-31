@@ -139,7 +139,7 @@ func CheckCommentsCache(id string) (result []byte, errorCode int) {
 	dateToday := time.Now().Format("2006.01.02")
 	CheckPathIsExist("cache/")
 	CheckPathIsExist("cache/" + dateToday)
-	fileName := fmt.Sprintf("cache/%v/%v.txt", dateToday, id)
+	fileName := fmt.Sprintf("cache/%v/%v.json", dateToday, id)
 	fileExist := CheckFileIsExist(fileName)
 	var file *os.File
 	if fileExist {
